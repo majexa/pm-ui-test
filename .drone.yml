@@ -1,0 +1,5 @@
+pipeline:
+  test:
+    image: majexa/ngn
+    commands:
+      - su user pm localServer createDatabaseConfig

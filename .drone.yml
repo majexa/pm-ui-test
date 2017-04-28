@@ -1,6 +1,14 @@
-#
 pipeline:
   test:
     image: majexa/ngn
     commands:
-      - su user pm localServer createDatabaseConfig
+      - curl --data-binary @test.feature http://localhost:3001
+
+services:
+  dosakai:
+    image: majexa/dosakai
+    environment:
+      EMAIL_SENDER: ci@majexa.ru
+      EMAIL_SCREENSHOTS_TO: andrey.yartsev.g@gmail.com
+      SMTP_EMAIL: ivan.lebedev321@gmail.com
+      SMTP_PASSWORD: q3gf8wqegfv97

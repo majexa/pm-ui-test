@@ -1,9 +1,9 @@
-#.
 pipeline:
   test:
     image: majexa/ngn
     commands:
-      - curl --data-binary @test.feature http://localhost:3001
+#      - cat insecure_key
+      - ssh -i insecure_key -o StrictHostKeyChecking=no root@172.17.0.2 dir /etc/service
 
 services:
   dosakai:

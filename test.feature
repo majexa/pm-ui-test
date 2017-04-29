@@ -1,4 +1,4 @@
-#language: ru
+# language: ru
 Функционал: Общий тест
   Контекст:
     Допустим я на странице "http://google.com/"

@@ -1,10 +1,8 @@
 pipeline:
   test:
-    image: majexa/ngn
+    image: majexa/dosakai-client
     commands:
-#      - cat insecure_key
-      - chmod 600 insecure_key
-      - ssh -i insecure_key -o StrictHostKeyChecking=no root@localhost dir /etc/service
+      - cd /usr/src/dosakai; bash run.sh /drone/src/test.feature
 
 services:
   dosakai:

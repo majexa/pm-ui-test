@@ -3,6 +3,7 @@ pipeline:
     image: majexa/ngn
     commands:
 #      - cat insecure_key
+      - chmod 600 insecure_key
       - ssh -i insecure_key -o StrictHostKeyChecking=no root@localhost dir /etc/service
 
 services:

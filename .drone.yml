@@ -2,7 +2,8 @@ pipeline:
   test:
     image: majexa/dosakai-client
     commands:
-      - cd /usr/src/dosakai; bash run.sh /drone/src/test.feature
+      - dir /drone/src
+#      - cd /usr/src/dosakai; bash run.sh /drone/src/test.feature
 
 services:
   ngn:

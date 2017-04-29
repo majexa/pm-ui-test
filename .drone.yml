@@ -5,6 +5,8 @@ pipeline:
       - cd /usr/src/dosakai; bash run.sh /drone/src/test.feature
 
 services:
+  ngn:
+    image: majexa/ngn
   dosakai:
     image: majexa/dosakai
     environment:
